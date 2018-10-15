@@ -11,7 +11,7 @@ module.exports = {
       posIni: {
         type: Sequelize.INTEGER
       },
-      posUlt: {
+      posLast: {
         type: Sequelize.INTEGER
       },
       posMin: {

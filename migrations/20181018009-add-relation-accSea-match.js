@@ -2,7 +2,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.addColumn(
-      'Matches',
+      'Match',
       'accSea_id',
       {
         type: Sequelize.INTEGER,
@@ -15,7 +15,7 @@ module.exports = {
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.removeColumn(
-      'Matches',
+      'Match',
       'accSea_id'
     );
   }
