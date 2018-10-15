@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,20 @@
   "bugs": {
     "url": "https://github.com/rogerknl/owt-srv/issues"
   },
-  "homepage": "https://github.com/rogerknl/owt-srv#readme"
+  "homepage": "https://github.com/rogerknl/owt-srv#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "jwt-simple": "^0.5.5",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
 }
