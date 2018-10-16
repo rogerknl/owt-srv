@@ -31,7 +31,23 @@ const localLogin = new LocalStrategy( localOptions, function(username, password,
 
 //jwt
 
+const jwtOptions = {
+  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+  secretOrKey: process.env.JWT_SECRET
+}
+
+const jwtLogin = new JwtStrategy ( jwtOptions, function (payload, done){
+  User.findOne({where: {username: payload.sub}})
+    .then( user => {
+      if( user ){
+        done(null, user);
+      } else {
+        done(mull, false);
+      }
+    });
+});
 
 
 
 passport.use(localLogin);
+passport.use(jwtLogin);
