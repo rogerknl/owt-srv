@@ -21,6 +21,11 @@ module.exports = app => {
 
   //Match
   app.get('/matches/:accseason_id', requireAuth, Match.getMatches );
+  app.post('/matches', requireAuth, Match.addMatch );
+
+  //heroStats
+  app.get('/herostats/:matchid', requireAuth, Match.getHeroStats);
+  app.post('/herostats', requireAuth, Match.addHeroStats);
 
 
   //auth
