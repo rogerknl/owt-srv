@@ -9,7 +9,9 @@ module.exports = {
         references:{
           model: 'Account',
           key: 'id'
-        }
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       }
     ).then( () => {
       return queryInterface.addColumn(
@@ -20,7 +22,9 @@ module.exports = {
           references:{
             model: 'Season',
             key: 'id'
-          }
+          },
+          onUpdate: 'cascade',
+          onDelete: 'cascade'
         }
       );
     });
