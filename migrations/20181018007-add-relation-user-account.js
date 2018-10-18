@@ -9,7 +9,9 @@ module.exports = {
         references:{
           model: 'User',
           key: 'id'
-        }
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       }
     );
   },

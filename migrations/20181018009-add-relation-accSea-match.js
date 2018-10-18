@@ -9,7 +9,9 @@ module.exports = {
         references:{
           model: 'AccountSeason',
           key: 'id'
-        }
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       }
     );
   },

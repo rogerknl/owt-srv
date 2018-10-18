@@ -9,7 +9,9 @@ module.exports = {
         references:{
           model: 'Match',
           key: 'id'
-        }
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       }
     );
   },
